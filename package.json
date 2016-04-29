@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "hat": "0.0.3",
-    "kad": "1.2.1",
+    "kad": "^1.5.5",
     "simple-peer": "^5.11.8"
   },
   "devDependencies": {
