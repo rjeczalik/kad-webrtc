@@ -7,7 +7,7 @@ Setup
 -----
 
 ```
-npm install kad@1.2.0-beta kad-webrtc
+npm install kad kad-webrtc
 ```
 
 Usage
