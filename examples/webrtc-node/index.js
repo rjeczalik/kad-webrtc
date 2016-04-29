@@ -3,7 +3,6 @@
 'use strict';
 
 var kademlia = require('kad');
-var levelup = require('levelup');
 var EventEmitter = require('events').EventEmitter;
 var wrtc = require('wrtc');
 var WebRTC = require('../..');
