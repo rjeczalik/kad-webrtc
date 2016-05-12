@@ -6,8 +6,7 @@ var WebRTC = require('../..');
 
 var node;
 
-document.querySelector('#node').addEventListener('submit', function (e)
-{
+document.querySelector('#node').addEventListener('submit', function (e) {
     // Prevent page refresh
     e.preventDefault();
 
@@ -26,8 +25,7 @@ document.querySelector('#node').addEventListener('submit', function (e)
             storage: new kademlia.storage.LocalStorage(id_string)
         });
 
-        function onConnect()
-        {
+        function onConnect() {
             console.log("Connection established!");
         }
 
@@ -35,8 +33,7 @@ document.querySelector('#node').addEventListener('submit', function (e)
     });
 });
 
-document.querySelector('#connect').addEventListener('submit', function (e)
-{
+document.querySelector('#connect').addEventListener('submit', function (e) {
     // Prevent page refresh
     e.preventDefault();
 
@@ -45,10 +42,8 @@ document.querySelector('#connect').addEventListener('submit', function (e)
 
     console.log("Connect ID: " + id_string);
 
-    node.connect({ nick: id_string }, function(err)
-    {
-        if(err)
-        {
+    node.connect({ nick: id_string }, function(err) {
+        if(err) {
             alert(err);
             return;
         }
@@ -56,8 +51,7 @@ document.querySelector('#connect').addEventListener('submit', function (e)
     });
 });
 
-document.querySelector('#get').addEventListener('submit', function (e)
-{
+document.querySelector('#get').addEventListener('submit', function (e) {
     // Prevent page refresh
     e.preventDefault();
 
@@ -66,10 +60,8 @@ document.querySelector('#get').addEventListener('submit', function (e)
 
     console.log("Lookup key: " + key_string);
 
-    node.get(key_string, function(err, value) 
-    {
-        if(err)
-        {
+    node.get(key_string, function(err, value) {
+        if(err) {
             alert(err);
             return;
         }
@@ -77,8 +69,7 @@ document.querySelector('#get').addEventListener('submit', function (e)
     });
 });
 
-document.querySelector('#put').addEventListener('submit', function (e)
-{
+document.querySelector('#put').addEventListener('submit', function (e) {
     // Prevent page refresh
     e.preventDefault();
 
@@ -93,10 +84,8 @@ document.querySelector('#put').addEventListener('submit', function (e)
     console.log("Save key: " + key_string);
     console.log("Save value: " + value_string);
 
-    node.put(key_string, value_string, function(err)
-    {
-        if(err) 
-        {
+    node.put(key_string, value_string, function(err) {
+        if(err) {
             alert(err);
             return;
         }
