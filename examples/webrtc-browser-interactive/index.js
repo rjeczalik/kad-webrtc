@@ -14,8 +14,8 @@ document.querySelector('#node').addEventListener('submit', function (e)
     var element = document.querySelector('#node input[name=id]');
     var id_string = element.value;
 
-    var webSocket = require('./web-socket');
-    var SignalClient = require('./signal-client');
+    var webSocket = require('../shared/web-socket');
+    var SignalClient = require('../shared/signal-client');
     var signaller = new SignalClient(id_string);
 
     webSocket.on('open', function() {
