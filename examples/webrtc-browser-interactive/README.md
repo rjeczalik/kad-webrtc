@@ -12,7 +12,7 @@ This example demonstrates end-to-end connectivity with a signal server.
 
 To start the signal server, do
 
-    node examples/webrtc-browser-e2e/server.js
+    node examples/shared/server.js
 
 Then, in your browser navigate to
 
