@@ -2,8 +2,8 @@
 
 var kademlia = require('kad');
 var WebRTC = require('../..');
-var webSocket = require('./web-socket');
-var SignalClient = require('./signal-client');
+var webSocket = require('../shared/web-socket');
+var SignalClient = require('../shared/signal-client');
 var EventEmitter = require('events').EventEmitter;
 var signalClient1 = new SignalClient('node1');
 var signalClient2 = new SignalClient('node2');
