@@ -4,6 +4,9 @@ var kademlia = require('kad');
 var EventEmitter = require('events').EventEmitter;
 var WebRTC = require('../..');
 
+// Required for kademlia.storage.MemStore
+global.setImmediate = require('timers').setImmediate;
+
 // The two nodes share a signaller
 var signaller = new EventEmitter();
 
@@ -12,7 +15,7 @@ var node1 = new kademlia.Node({
   transport: new WebRTC(new WebRTC.Contact({
     nick: 'node1'
   }), { signaller: signaller }),
-  storage: new kademlia.storage.LocalStorage('node1')
+  storage: new kademlia.storage.MemStore()
 });
 
 // Create a second node
@@ -20,7 +23,7 @@ var node2 = new kademlia.Node({
   transport: new WebRTC(new WebRTC.Contact({
     nick: 'node2'
   }), { signaller: signaller }),
-  storage: new kademlia.storage.LocalStorage('node2')
+  storage: new kademlia.storage.MemStore()
 });
 
 node2.on('connect', onConnect);

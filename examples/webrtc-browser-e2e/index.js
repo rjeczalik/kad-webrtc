@@ -8,6 +8,9 @@ var EventEmitter = require('events').EventEmitter;
 var signalClient1 = new SignalClient('node1');
 var signalClient2 = new SignalClient('node2');
 
+// Required for kademlia.storage.MemStore
+global.setImmediate = require('timers').setImmediate;
+
 webSocket.on('open', function() {
 
   // Create our first node
@@ -15,7 +18,7 @@ webSocket.on('open', function() {
     transport: new WebRTC(new WebRTC.Contact({
       nick: 'node1'
     }), { signaller: signalClient1 }),
-    storage: new kademlia.storage.LocalStorage('node1')
+    storage: new kademlia.storage.MemStore()
   });
 
   // Create a second node
@@ -23,7 +26,7 @@ webSocket.on('open', function() {
     transport: new WebRTC(new WebRTC.Contact({
       nick: 'node2'
     }), { signaller: signalClient2 }),
-    storage: new kademlia.storage.LocalStorage('node2')
+    storage: new kademlia.storage.MemStore()
   });
 
   node2.on('connect', onConnect);
