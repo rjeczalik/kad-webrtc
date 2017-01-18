@@ -38,7 +38,7 @@ you will need to manually install the `wrtc` dependency.
 
 You can do this by running:
 
-    npm install wrtc@0.0.59
+    npm install wrtc@0.0.61
 
 The reason for this is that the `wrtc` dependency doesn't install correctly
 on many platforms.
