@@ -9,11 +9,11 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "node_modules/.bin/mocha test/**",
+    "test": "mocha test/**",
     "build-examples": "npm run build-browser && npm run build-browser-e2e && npm run build-browser-interactive",
-    "build-browser": "./node_modules/.bin/browserify examples/webrtc-browser/index.js > examples/webrtc-browser/index.browser.js",
-    "build-browser-e2e": "./node_modules/.bin/browserify examples/webrtc-browser-e2e/index.js > examples/webrtc-browser-e2e/index.browser.js",
-    "build-browser-interactive": "./node_modules/.bin/browserify examples/webrtc-browser-interactive/index.js > examples/webrtc-browser-interactive/index.browser.js"
+    "build-browser": "browserify examples/webrtc-browser/index.js > examples/webrtc-browser/index.browser.js",
+    "build-browser-e2e": "browserify examples/webrtc-browser-e2e/index.js > examples/webrtc-browser-e2e/index.browser.js",
+    "build-browser-interactive": "browserify examples/webrtc-browser-interactive/index.js > examples/webrtc-browser-interactive/index.browser.js"
   },
   "keywords": [
     "kad",
