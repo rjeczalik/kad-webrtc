@@ -5,7 +5,7 @@ const kad = require('kad');
 
 const WebRTCTransport = require('../lib/transport');
 
-describe('KademliaNode+HTTPTransport', function() {
+describe('KademliaNode+WebRTCTransport', function() {
 
   const [node1, node2] = require('./fixtures/node-generator')(
     2,
