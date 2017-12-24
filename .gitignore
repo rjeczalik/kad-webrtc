@@ -34,3 +34,5 @@ dist/*.js
 index.browser.js
 node1
 node2
+
+package-lock.json
