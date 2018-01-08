@@ -28,8 +28,7 @@
   },
   "dependencies": {
     "hat": "0.0.3",
-    "kad": "^1.5.5",
-    "simple-peer": "^6.2.0"
+    "simple-peer": "^8.2.0"
   },
   "devDependencies": {
     "chai": "^3.4.1",
