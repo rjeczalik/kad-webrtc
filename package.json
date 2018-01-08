@@ -1,6 +1,6 @@
 {
   "name": "kad-webrtc",
-  "version": "2.0.0-beta",
+  "version": "2.0.0-alpha",
   "description": "webrtc transport for kad",
   "main": "index.js",
   "directories": {
@@ -28,7 +28,6 @@
   },
   "dependencies": {
     "hat": "0.0.3",
-    "kad": "^2.4.1",
     "simple-peer": "^8.2.0"
   },
   "devDependencies": {
